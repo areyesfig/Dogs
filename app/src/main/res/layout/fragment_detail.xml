@@ -7,7 +7,7 @@
     <RelativeLayout
 
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
+        android:layout_height="593dp"
         tools:context=".view.DetailFragment">
 
         <ImageView
@@ -21,48 +21,43 @@
 
         <TextView
             android:id="@+id/dogName"
+            style="@style/Title"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Dog name"
-            style="@style/Title"
             android:layout_below="@+id/dogImage"
             android:layout_centerHorizontal="true"
             android:layout_margin="4dp"
-            />
+            android:text="Dog name" />
 
-            <TextView
-                android:id="@+id/dogPurpose"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="Dog Purpose"
-                style="@style/Title"
-                android:layout_below="@+id/dogName"
-                android:layout_centerHorizontal="true"
-                android:layout_margin="4dp"
-                />
+        <TextView
+            android:id="@+id/dogPurpose"
+            style="@style/Title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/dogName"
+            android:layout_centerHorizontal="true"
+            android:layout_margin="4dp"
+            android:text="Dog Purpose" />
 
-            <TextView
-                android:id="@+id/dogTemperament"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="Dog Temperament"
-                style="@style/Title"
-                android:layout_below="@+id/dogPurpose"
-                android:layout_centerHorizontal="true"
-                android:layout_margin="4dp"
-                />
+        <TextView
+            android:id="@+id/dogTemperament"
+            style="@style/Title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/dogPurpose"
+            android:layout_centerHorizontal="true"
+            android:layout_margin="4dp"
+            android:text="Dog Temperament" />
 
-            <TextView
-                android:id="@+id/dogLifeSpan"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="Dog Life Span"
-                style="@style/Title"
-                android:layout_below="@+id/dogTemperament"
-                android:layout_centerHorizontal="true"
-                android:layout_margin="4dp"
-                />
-
+        <TextView
+            android:id="@+id/dogLifeSpan"
+            style="@style/Title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/dogTemperament"
+            android:layout_centerHorizontal="true"
+            android:layout_margin="4dp"
+            android:text="Dog Life Span" />
 
 
     </RelativeLayout>
