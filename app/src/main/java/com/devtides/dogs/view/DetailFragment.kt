@@ -10,6 +10,8 @@ import androidx.lifecycle.ViewModel
 import androidx.lifecycle.ViewModelProviders
 import androidx.navigation.Navigation
 import com.devtides.dogs.R
+import com.devtides.dogs.util.getProgressDrawable
+import com.devtides.dogs.util.loadImage
 import com.devtides.dogs.viewmodel.DetailViewModel
 import kotlinx.android.synthetic.main.fragment_detail.*
 
@@ -30,15 +32,14 @@ class DetailFragment : Fragment() {
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
 
-        viewModel = ViewModelProviders.of(this).get(DetailViewModel::class.java)
-        viewModel.fetch()
-        
         arguments?.let {
             dogUuid = DetailFragmentArgs.fromBundle(it).dogUuid
         }
 
-        observeViewModel()
+        viewModel = ViewModelProviders.of(this).get(DetailViewModel::class.java)
+        viewModel.fetch(dogUuid)
 
+        observeViewModel()
 
     }
 
@@ -49,6 +50,7 @@ class DetailFragment : Fragment() {
                 dogPurpose.text = dog.bredFor
                 dogTemperament.text = dog.temperament
                 dogLifeSpan.text = dog.lifeSpan
+                context?.let { dogImage.loadImage(dog.imageUrl, getProgressDrawable(it)) }
 
         }
         })
